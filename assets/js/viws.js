@@ -1,8 +1,7 @@
+const content = document.getElementById("content");
+let print = "";
+
 function printProduct(product) {
-  const content = document.getElementById("content");
-
-  let print = "";
-
   product.forEach((p) => {
     print += `
       <div class="col">
@@ -17,7 +16,7 @@ function printProduct(product) {
             </p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Valor: ${p.price}</small>
+            <small class="text-muted">Price: ${p.price}</small>
           </div>
           <div class="card-footer">
             <small class="text-muted">
@@ -30,7 +29,6 @@ function printProduct(product) {
         </div>
       </div>`;
   });
-
   content.innerHTML = print;
 }
 

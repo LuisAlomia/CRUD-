@@ -90,7 +90,7 @@ function updateProduct() {
 
   const update = {
     name,
-    price,
+    price: Math.round(price),
     image,
   };
 
