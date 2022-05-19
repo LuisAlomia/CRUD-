@@ -1,7 +1,8 @@
-const content = document.getElementById("content");
-let print = "";
-
 function printProduct(product) {
+  const content = document.getElementById("content");
+
+  let print = "";
+
   product.forEach((p) => {
     print += `
       <div class="col">
