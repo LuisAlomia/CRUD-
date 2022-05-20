@@ -29,7 +29,6 @@ function addProduct() {
   axios
     .post(`${globalURL}`, newProduct)
     .then((result) => {
-      console.log(result);
       alert("Se agrego el producto");
       getProducts();
     })
@@ -49,8 +48,7 @@ function deleteProduct(id) {
 
   axios
     .delete(`${globalURL}/${id}`)
-    .then((result) => {
-      console.log(result);
+    .then(() => {
       alert("Producto eliminado");
       getProducts();
     })
@@ -101,7 +99,6 @@ function updateProduct() {
   axios
     .put(`${globalURL}/${idEdit}`, update)
     .then((result) => {
-      console.log(result);
       alert("Producto Actualizado");
       getProducts();
     })
