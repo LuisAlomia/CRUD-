@@ -34,7 +34,9 @@ function addProduct() {
     })
     .catch((err) => {
       console.log(err);
-      alert("Error al subir producto");
+      alert(
+        "Error al subir producto, la URL de la imagen debe terminar en un formato valido como JPG"
+      );
     });
 
   formAdd.reset();
