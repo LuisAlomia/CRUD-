@@ -16,6 +16,7 @@ function getProducts() {
 /* --------ADD PRODUCTS---------- */
 
 function addProduct() {
+  const formAdd = document.getElementById("formAdd");
   let name = document.getElementById("name").value;
   let price = document.getElementById("price").value;
   let image = document.getElementById("image").value;
@@ -36,6 +37,8 @@ function addProduct() {
       console.log(err);
       alert("Error al subir producto");
     });
+
+  formAdd.reset();
 }
 
 /* --------DELETE PRODUCTS---------- */
@@ -84,6 +87,7 @@ function editProduct(id) {
 /* Update */
 
 function updateProduct() {
+  const formUpdate = document.getElementById("formUpdate");
   let name = document.getElementById("updatename").value;
   let price = document.getElementById("updateprice").value;
   let image = document.getElementById("updateimage").value;
@@ -104,6 +108,8 @@ function updateProduct() {
     .catch((err) => {
       console.log(err);
     });
+
+  formUpdate.reset();
 }
 
 export { getProducts, addProduct, deleteProduct, editProduct, updateProduct };
